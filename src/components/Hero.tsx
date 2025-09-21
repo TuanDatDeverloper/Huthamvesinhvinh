@@ -40,21 +40,15 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button 
-                size="lg" 
-                className="bg-warm-orange hover:bg-warm-orange/90 text-white text-lg px-8 py-4"
-                onClick={() => window.open('https://zalo.me/0366740019', '_blank')}
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Gọi ngay: 0366740019
-              </Button>
-<Button 
-                size="lg"
-                className="bg-warm-orange hover:bg-warm-orange/90 text-white text-lg px-8 py-4 border border-warm-orange"
-                onClick={() => window.open('https://zalo.me/0366740019', '_blank')}
-              >
-                Báo giá miễn phí
-              </Button>
+<a
+  href="tel:0366740019"
+  className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-11 rounded-md bg-warm-orange hover:bg-warm-orange/90 text-white text-lg px-8 py-4"
+  style={{ textDecoration: "none" }}
+>
+  <Phone className="h-5 w-5 mr-2" />
+  Gọi ngay: 0366740019
+</a>
+              
             </div>
           </div>
         </div>

@@ -184,15 +184,6 @@ const Pricing = () => {
                     ))}
                   </div>
 
-                  <Button 
-                    className={`w-full ${
-                      pkg.popular
-                        ? 'bg-trust-green hover:bg-trust-green/90 text-white'
-                        : 'bg-professional-blue hover:bg-professional-blue/90 text-white'
-                    }`}
-                  >
-                    Chọn gói này
-                  </Button>
                 </Card>
               ))}
             </div>
@@ -300,17 +291,19 @@ const Pricing = () => {
               Liên hệ ngay để được tư vấn và báo giá chính xác cho nhu cầu của bạn
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button 
-                size="lg"
-                className="bg-warm-orange hover:bg-warm-orange/90 text-white px-8"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-Gọi ngay: 0366740019
-              </Button>
+<Button 
+  size="lg"
+  className="bg-warm-orange hover:bg-warm-orange/90 text-white px-8"
+  onClick={() => window.location.href = "tel:0366740019"}
+>
+  <Phone className="h-5 w-5 mr-2" />
+  Gọi ngay: 0366740019
+</Button>
 <Button 
   variant="outline"
   size="lg" 
   className="bg-warm-orange hover:bg-warm-orange/90 text-white border border-warm-orange px-8"
+  onClick={() => window.location.href = "tel:0366740019"}
 >
   Nhận báo giá
 </Button>

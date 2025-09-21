@@ -48,13 +48,14 @@ const Services = () => {
               <p className="text-xl lg:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
                 Giải pháp hoàn hảo cho mọi vấn đề về cống rãnh, hầm vệ sinh tại TP Vinh và các tỉnh lân cận
               </p>
-              <Button 
-                size="lg"
-                className="bg-warm-orange hover:bg-warm-orange/90 text-white px-8"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Gọi ngay: 0366740019
-              </Button>
+<a
+  href="tel:0366740019"
+  className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-11 rounded-md bg-warm-orange hover:bg-warm-orange/90 text-white px-8"
+  style={{ textDecoration: "none" }}
+>
+  <Phone className="h-5 w-5 mr-2" />
+  Gọi ngay: 0366740019
+</a>
             </div>
           </div>
         </section>
@@ -163,17 +164,19 @@ const Services = () => {
               Chúng tôi sẵn sàng phục vụ 24/7. Gọi ngay để được tư vấn và báo giá miễn phí!
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button 
-                size="lg"
-                className="bg-warm-orange hover:bg-warm-orange/90 text-white px-8"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Hotline: 0366740019
-              </Button>
+<Button 
+  size="lg"
+  className="bg-warm-orange hover:bg-warm-orange/90 text-white px-8"
+  onClick={() => { window.location.href = "tel:0366740019"; }}
+>
+  <Phone className="h-5 w-5 mr-2" />
+  Hotline: 0366740019
+</Button>
               <Button 
                 variant="outline"
                 size="lg" 
                 className="bg-warm-orange hover:bg-warm-orange/90 text-white border border-warm-orange px-8"
+                onClick={() => { window.location.href = "tel:0366740019"; }}
               >
                 Yêu cầu báo giá
               </Button>
