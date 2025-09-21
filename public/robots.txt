@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://huthamvesinhvinh.netlify.app/my-sitemap.xml
