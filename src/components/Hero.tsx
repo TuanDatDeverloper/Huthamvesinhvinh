@@ -43,14 +43,15 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="bg-warm-orange hover:bg-warm-orange/90 text-white text-lg px-8 py-4"
+                onClick={() => window.open('https://zalo.me/0366740019', '_blank')}
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Gọi ngay: 0987.654.321
+                Gọi ngay: 0366740019
               </Button>
-              <Button 
-                variant="outline" 
+<Button 
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-professional-blue text-lg px-8 py-4"
+                className="bg-warm-orange hover:bg-warm-orange/90 text-white text-lg px-8 py-4 border border-warm-orange"
+                onClick={() => window.open('https://zalo.me/0366740019', '_blank')}
               >
                 Báo giá miễn phí
               </Button>

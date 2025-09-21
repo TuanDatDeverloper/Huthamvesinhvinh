@@ -8,9 +8,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">TV</span>
-              </div>
+<img
+  src="/favicon.ico"
+  alt="Logo"
+  className="w-10 h-10 rounded-lg object-cover"
+/>
               <div>
                 <h3 className="text-lg font-bold">Thông Tắc Vinh</h3>
                 <p className="text-sm opacity-80">Dịch vụ chuyên nghiệp</p>
@@ -40,7 +42,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-trust-green" />
-                <span>Hotline: 0987.654.321</span>
+<span>Hotline: 0366740019</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-trust-green" />

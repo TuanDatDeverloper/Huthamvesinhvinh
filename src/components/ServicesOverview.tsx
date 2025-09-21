@@ -33,12 +33,6 @@ const ServicesOverview = () => {
       title: "Vệ sinh đường ống",
       description: "Vệ sinh toàn bộ hệ thống đường ống, đảm bảo hoạt động trơn tru",
       price: "Từ 400.000đ"
-    },
-    {
-      icon: Shield,
-      title: "Bảo trì định kỳ",
-      description: "Gói bảo trì định kỳ, kiểm tra và vệ sinh hệ thống theo lịch",
-      price: "Tư vấn miễn phí"
     }
   ];
 
@@ -71,22 +65,12 @@ const ServicesOverview = () => {
                 
                 <p className="text-muted-foreground mb-6">{service.description}</p>
                 
-                <Button variant="outline" className="w-full border-trust-green text-trust-green hover:bg-trust-green hover:text-white">
-                  Xem chi tiết
-                </Button>
               </Card>
             );
           })}
         </div>
 
-        <div className="text-center mt-12">
-          <Button 
-            size="lg" 
-            className="bg-professional-blue hover:bg-professional-blue/90 text-white px-8"
-          >
-            Xem tất cả dịch vụ
-          </Button>
-        </div>
+        
       </div>
     </section>
   );

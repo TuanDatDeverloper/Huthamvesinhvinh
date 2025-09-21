@@ -11,7 +11,6 @@ const PricingPreview = () => {
       features: [
         "Thông tắc cống sinh hoạt",
         "Kiểm tra tình trạng đường ống",
-        "Bảo hành 3 tháng",
         "Phục vụ trong ngày"
       ],
       popular: false
@@ -24,7 +23,6 @@ const PricingPreview = () => {
         "Hút hầm vệ sinh/bể phốt",
         "Thông tắc cống nghiêm trọng",
         "Vệ sinh đường ống",
-        "Bảo hành 6 tháng",
         "Phục vụ 24/7"
       ],
       popular: true
@@ -38,7 +36,6 @@ const PricingPreview = () => {
         "Nạo vét hố ga",
         "Xử lý mùi hôi",
         "Bảo trì định kỳ",
-        "Bảo hành 1 năm",
         "Ưu tiên phục vụ"
       ],
       popular: false
@@ -96,15 +93,6 @@ const PricingPreview = () => {
                 ))}
               </ul>
 
-              <Button 
-                className={`w-full ${
-                  pkg.popular
-                    ? 'bg-trust-green hover:bg-trust-green/90 text-white'
-                    : 'bg-professional-blue hover:bg-professional-blue/90 text-white'
-                }`}
-              >
-                Chọn gói này
-              </Button>
             </Card>
           ))}
         </div>
@@ -113,13 +101,6 @@ const PricingPreview = () => {
           <p className="text-muted-foreground mb-4">
             * Giá có thể thay đổi tùy theo tình trạng thực tế và khoảng cách di chuyển
           </p>
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-professional-blue text-professional-blue hover:bg-professional-blue hover:text-white"
-          >
-            Xem bảng giá chi tiết
-          </Button>
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+// Đã cập nhật: Lấy danh sách dịch vụ từ API backend
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -5,94 +6,30 @@ import { Button } from "@/components/ui/button";
 import { Wrench, Truck, Droplets, Wind, Zap, Shield, Phone, CheckCircle } from "lucide-react";
 import equipmentImage from "@/assets/equipment.jpg";
 import beforeAfterImage from "@/assets/before-after.jpg";
+import { useEffect, useState } from "react";
+
+const iconMap: Record<string, any> = {
+  Wrench,
+  Truck,
+  Droplets,
+  Wind,
+  Zap,
+};
 
 const Services = () => {
-  const mainServices = [
-    {
-      icon: Wrench,
-      title: "Thông tắc cống",
-      description: "Xử lý tình trạng tắc cống do rác thải, lá cây, chất bẩn tích tụ lâu ngày. Sử dụng thiết bị chuyên dụng không làm hỏng đường ống.",
-      details: [
-        "Thông tắc cống sinh hoạt",
-        "Thông tắc cống thoát nước mưa", 
-        "Xử lý tắc nghẽn nghiêm trọng",
-        "Kiểm tra camera đường ống"
-      ],
-      price: "Từ 200.000đ",
-      warranty: "3 tháng"
-    },
-    {
-      icon: Truck,
-      title: "Hút hầm vệ sinh",
-      description: "Dịch vụ hút bể phốt, hầm cầu với xe chuyên dụng hiện đại. Đảm bảo vệ sinh an toàn và không gây ô nhiễm môi trường.",
-      details: [
-        "Hút bể phốt gia đình",
-        "Hút hầm cầu tập thể",
-        "Hút bồn chứa nước thải",
-        "Vệ sinh khử trùng sau hút"
-      ],
-      price: "Từ 500.000đ",
-      warranty: "6 tháng"
-    },
-    {
-      icon: Droplets,
-      title: "Nạo vét hố ga",
-      description: "Vệ sinh và nạo vét hố ga, hố thu nước mưa để đảm bảo hệ thống thoát nước hoạt động trơn tru.",
-      details: [
-        "Nạo vét hố ga sinh hoạt",
-        "Vệ sinh hố thu nước mưa",
-        "Thay thế nắp hố ga",
-        "Sửa chữa hố ga hỏng"
-      ],
-      price: "Từ 150.000đ",
-      warranty: "3 tháng"
-    },
-    {
-      icon: Wind,
-      title: "Xử lý mùi hôi",
-      description: "Khử mùi hôi từ cống, hầm vệ sinh bằng công nghệ xử lý hiện đại, an toàn cho sức khỏe.",
-      details: [
-        "Xử lý mùi hôi cống thoát nước",
-        "Khử mùi hầm vệ sinh",
-        "Xử lý mùi từ bể phốt",
-        "Phun thuốc khử trùng"
-      ],
-      price: "Từ 300.000đ",
-      warranty: "1 tháng"
-    },
-    {
-      icon: Zap,
-      title: "Vệ sinh đường ống",
-      description: "Vệ sinh toàn bộ hệ thống đường ống bằng máy cao áp, loại bỏ cặn bẩn và vi khuẩn.",
-      details: [
-        "Vệ sinh ống nước",
-        "Vệ sinh ống thoát nước",
-        "Kiểm tra rò rỉ",
-        "Thay thế ống hỏng"
-      ],
-      price: "Từ 400.000đ",
-      warranty: "6 tháng"
-    },
-    {
-      icon: Shield,
-      title: "Bảo trì định kỳ",
-      description: "Gói bảo trì định kỳ cho hệ thống cống rãnh, đảm bảo hoạt động ổn định quanh năm.",
-      details: [
-        "Kiểm tra định kỳ 3-6 tháng",
-        "Vệ sinh phòng ngừa",
-        "Tư vấn cải thiện hệ thống",
-        "Ưu tiên hỗ trợ khẩn cấp"
-      ],
-      price: "Tư vấn miễn phí",
-      warranty: "Theo hợp đồng"
-    }
-  ];
+  const [mainServices, setMainServices] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/services")
+      .then((res) => res.json())
+      .then((data) => setMainServices(data))
+      .catch(() => setMainServices([]));
+  }, []);
 
   const whyChooseUs = [
     "Đội ngũ kỹ thuật viên có kinh nghiệm 10+ năm",
-    "Thiết bị hiện đại nhập khẩu từ Nhật Bản",
-    "Phục vụ 24/7 kể cả ngày lễ, Tết",
-    "Không đục phá, không làm hỏng công trình",
+    "Phục vụ 24/7 kể cả ngày lễ",
+    "Không làm hỏng công trình",
     "Giá cả minh bạch, báo giá trước khi làm",
     "Bảo hành dài hạn và hỗ trợ sau dịch vụ"
   ];
@@ -100,7 +37,6 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-hero text-white py-16 lg:py-24">
@@ -117,7 +53,7 @@ const Services = () => {
                 className="bg-warm-orange hover:bg-warm-orange/90 text-white px-8"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Gọi ngay: 0987.654.321
+                Gọi ngay: 0366740019
               </Button>
             </div>
           </div>
@@ -137,7 +73,12 @@ const Services = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {mainServices.map((service, index) => {
-                const IconComponent = service.icon;
+                const IconComponent = iconMap[service.icon] || Wrench;
+                const details = Array.isArray(service.details)
+                  ? service.details
+                  : (typeof service.details === "string"
+                      ? JSON.parse(service.details)
+                      : []);
                 return (
                   <Card key={index} className="p-6 shadow-card bg-gradient-card border-0">
                     <div className="flex items-start space-x-4 mb-4">
@@ -148,17 +89,16 @@ const Services = () => {
                         <h3 className="text-xl font-semibold text-professional-blue mb-2">
                           {service.title}
                         </h3>
-                        <div className="flex items-center space-x-4 mb-3">
-                          <span className="text-lg font-bold text-trust-green">{service.price}</span>
-                          <span className="text-sm text-muted-foreground">BH: {service.warranty}</span>
-                        </div>
+<div className="flex items-center space-x-4 mb-3">
+  <span className="text-lg font-bold text-trust-green">{service.price}</span>
+</div>
                       </div>
                     </div>
                     
                     <p className="text-muted-foreground mb-4">{service.description}</p>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
-                      {service.details.map((detail, detailIndex) => (
+                      {details.map((detail: string, detailIndex: number) => (
                         <div key={detailIndex} className="flex items-center space-x-2">
                           <CheckCircle className="h-4 w-4 text-trust-green flex-shrink-0" />
                           <span className="text-sm">{detail}</span>
@@ -166,9 +106,7 @@ const Services = () => {
                       ))}
                     </div>
                     
-                    <Button className="w-full bg-professional-blue hover:bg-professional-blue/90 text-white">
-                      Đặt dịch vụ ngay
-                    </Button>
+                    
                   </Card>
                 );
               })}
@@ -230,12 +168,12 @@ const Services = () => {
                 className="bg-warm-orange hover:bg-warm-orange/90 text-white px-8"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Hotline: 0987.654.321
+                Hotline: 0366740019
               </Button>
               <Button 
                 variant="outline"
                 size="lg" 
-                className="border-white text-white hover:bg-white hover:text-professional-blue px-8"
+                className="bg-warm-orange hover:bg-warm-orange/90 text-white border border-warm-orange px-8"
               >
                 Yêu cầu báo giá
               </Button>
@@ -243,7 +181,6 @@ const Services = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

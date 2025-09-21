@@ -16,7 +16,6 @@ const Pricing = () => {
         "Thông tắc cống sinh hoạt",
         "Kiểm tra đường ống cơ bản",
         "Vệ sinh nhẹ",
-        "Bảo hành 3 tháng",
         "Phục vụ trong ngày làm việc"
       ],
       notIncluded: [
@@ -37,8 +36,6 @@ const Pricing = () => {
         "Hút hầm vệ sinh/bể phốt",
         "Thông tắc nghiêm trọng",
         "Vệ sinh đường ống",
-        "Kiểm tra camera (nếu cần)",
-        "Bảo hành 6 tháng",
         "Phục vụ 24/7",
         "Tư vấn kỹ thuật"
       ],
@@ -59,8 +56,6 @@ const Pricing = () => {
         "Nạo vét hố ga",
         "Xử lý mùi hôi chuyên sâu",
         "Vệ sinh toàn hệ thống",
-        "Kiểm tra định kỳ 6 tháng",
-        "Bảo hành 1 năm",
         "Ưu tiên phục vụ cao nhất",
         "Hỗ trợ kỹ thuật 24/7",
         "Tư vấn cải thiện hệ thống"
@@ -74,12 +69,9 @@ const Pricing = () => {
   const additionalServices = [
     { name: "Thông tắc cống cơ bản", price: "150.000đ - 300.000đ", unit: "/lần" },
     { name: "Hút bể phốt gia đình", price: "400.000đ - 600.000đ", unit: "/lần" },
-    { name: "Hút hầm cầu tập thể", price: "800.000đ - 1.500.000đ", unit: "/lần" },
     { name: "Nạo vét hố ga", price: "100.000đ - 200.000đ", unit: "/hố" },
     { name: "Xử lý mùi hôi", price: "200.000đ - 400.000đ", unit: "/lần" },
-    { name: "Kiểm tra camera đường ống", price: "300.000đ - 500.000đ", unit: "/lần" },
-    { name: "Sửa chữa đường ống", price: "500.000đ - 2.000.000đ", unit: "/công trình" },
-    { name: "Bảo trì định kỳ", price: "1.000.000đ - 3.000.000đ", unit: "/năm" }
+    { name: "Sửa chữa đường ống", price: "500.000đ - 2.000.000đ", unit: "/công trình" }
   ];
 
   const testimonials = [
@@ -313,15 +305,15 @@ const Pricing = () => {
                 className="bg-warm-orange hover:bg-warm-orange/90 text-white px-8"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Gọi ngay: 0987.654.321
+Gọi ngay: 0366740019
               </Button>
-              <Button 
-                variant="outline"
-                size="lg" 
-                className="border-white text-white hover:bg-white hover:text-professional-blue px-8"
-              >
-                Nhận báo giá
-              </Button>
+<Button 
+  variant="outline"
+  size="lg" 
+  className="bg-warm-orange hover:bg-warm-orange/90 text-white border border-warm-orange px-8"
+>
+  Nhận báo giá
+</Button>
             </div>
           </div>
         </section>

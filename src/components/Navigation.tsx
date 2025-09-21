@@ -20,9 +20,11 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">TV</span>
-            </div>
+            <img
+              src="/favicon.ico"
+              alt="Logo"
+              className="w-10 h-10 rounded-lg object-cover"
+            />
             <div>
               <h1 className="text-lg font-bold text-professional-blue">
                 Thông Tắc Vinh
@@ -50,13 +52,17 @@ const Navigation = () => {
 
           {/* Phone CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:0987654321" className="flex items-center space-x-2 text-professional-blue font-semibold">
-              <Phone className="h-4 w-4" />
-              <span>0987.654.321</span>
-            </a>
-            <Button className="bg-warm-orange hover:bg-warm-orange/90 text-white">
-              Gọi ngay
-            </Button>
+<a href="tel:0366740019" className="flex items-center space-x-2 text-professional-blue font-semibold">
+  <Phone className="h-4 w-4" />
+  <span>0366740019</span>
+</a>
+<a
+  href="tel:0366740019"
+  className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-11 rounded-md bg-warm-orange hover:bg-warm-orange/90 text-white text-lg px-8 py-4"
+  style={{ textDecoration: "none" }}
+>
+  Gọi ngay
+</a>
           </div>
 
           {/* Mobile menu button */}
@@ -90,13 +96,13 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-4 border-t">
-                <a
-                  href="tel:0987654321"
-                  className="flex items-center space-x-2 px-3 py-2 text-professional-blue font-semibold"
-                >
-                  <Phone className="h-4 w-4" />
-                  <span>0987.654.321</span>
-                </a>
+<a
+  href="tel:0366740019"
+  className="flex items-center space-x-2 px-3 py-2 text-professional-blue font-semibold"
+>
+  <Phone className="h-4 w-4" />
+  <span>0366740019</span>
+</a>
               </div>
             </div>
           </div>

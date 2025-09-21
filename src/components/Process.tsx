@@ -1,4 +1,4 @@
-import { Phone, Search, FileText, Wrench, CheckCircle, Shield } from "lucide-react";
+import { Phone, Search, FileText, Wrench, CheckCircle } from "lucide-react";
 
 const Process = () => {
   const steps = [
@@ -24,7 +24,7 @@ const Process = () => {
       icon: Wrench,
       number: "04",
       title: "Thi công",
-      description: "Tiến hành thi công với thiết bị chuyên dụng, không đục phá"
+      description: "Tiến hành thi công với thiết bị chuyên dụng"
     },
     {
       icon: CheckCircle,
@@ -32,12 +32,6 @@ const Process = () => {
       title: "Nghiệm thu",
       description: "Kiểm tra kết quả, đảm bảo chất lượng trước khi bàn giao"
     },
-    {
-      icon: Shield,
-      number: "06",
-      title: "Bảo hành",
-      description: "Cam kết bảo hành dài hạn và hỗ trợ sau khi hoàn thành"
-    }
   ];
 
   return (
@@ -85,7 +79,6 @@ const Process = () => {
             </h3>
             <p className="text-muted-foreground mb-6">
               Chúng tôi cam kết thực hiện đúng quy trình, đảm bảo chất lượng và tiến độ. 
-              Mọi công việc đều có bảo hành và hỗ trợ kỹ thuật sau khi hoàn thành.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
               <div>
@@ -93,12 +86,12 @@ const Process = () => {
                 <div className="text-sm text-muted-foreground">Hỗ trợ</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-trust-green">100%</div>
-                <div className="text-sm text-muted-foreground">Hài lòng</div>
+                <div className="text-2xl font-bold text-professional-blue">Cam kết</div>
+                <div className="text-sm text-muted-foreground">Chất lượng</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-trust-green">1 năm</div>
-                <div className="text-sm text-muted-foreground">Bảo hành</div>
+                <div className="text-2xl font-bold text-trust-green">100%</div>
+                <div className="text-sm text-muted-foreground">Hài lòng</div>
               </div>
             </div>
           </div>
